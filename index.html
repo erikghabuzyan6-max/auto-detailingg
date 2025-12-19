@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Detailing Pro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738');
+      background-size: cover;
+      background-position: center;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    .hero h2 {
+      font-size: 2.6em;
+      text-align: center;
+      max-width: 800px;
+    }
+    .hero .hero-buttons {
+      margin-top: 25px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero .hero-buttons a {
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .hero .book-btn { background:#ffffff; color:#111; }
+    .hero .call-btn { background:#111; color:#ffffff; }
+    .hero .message-btn { background:#2ecc71; color:#ffffff; }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+    .service-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .service-item {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      margin: 15px;
+      width: 300px;
+      text-align: center;
+    }
+    .service-item h3 {
+      margin-top: 0;
+    }
+    form {
+      background-color: white;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    form button {
+      background-color: #111;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+      cursor: pointer;
+      width: 100%;
+    }
+    form button:hover {
+      background-color: #333;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Auto Detailing Pro</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#booking">Book Now</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div style="text-align:center;">
+    <h2>Professional Auto Detailing That Makes Your Car Look Brand New</h2>
+    <div class="hero-buttons">
+      <a href="#booking" class="book-btn">Book Now</a>
+      <a href="tel:+17472798744" class="call-btn">Call</a>
+      <a href="sms:+17472798744" class="message-btn">Message</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="service-list">
+    <div class="service-item">
+      <h3>Interior Deep Cleaning</h3>
+      <p>Complete interior detailing with stain removal, odor elimination, and surface protection.</p>
+    </div>
+    <div class="service-item">
+      <h3>Exterior Polishing</h3>
+      <p>Paint correction and polishing to restore gloss and remove swirl marks.</p>
+    </div>
+    <div class="service-item">
+      <h3>Ceramic Coating</h3>
+      <p>Long-lasting paint protection with enhanced shine and hydrophobic effect.</p>
+    </div>
+    <div class="service-item">
+      <h3>Engine Bay Cleaning</h3>
+      <p>Safe and professional cleaning of the engine bay for a clean and fresh look.</p>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <h2>Book a Service</h2>
+  <form action="https://formspree.io/f/xpqazgdk" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="address" placeholder="Service Address (Street, City, ZIP)" required>
+    <select name="service" required>
+      <option value="">Select a Service</option>
+      <option value="Interior Cleaning">Interior Deep Cleaning</option>
+      <option value="Exterior Polishing">Exterior Polishing</option>
+      <option value="Ceramic Coating">Ceramic Coating</option>
+      <option value="Engine Cleaning">Engine Bay Cleaning</option>
+    </select>
+    <textarea name="message" rows="5" placeholder="Additional details (vehicle type, preferred date, etc.)"></textarea>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<footer id="contact">
+  <p>Email: eghabuzyan@gmail.com | Phone: +1 (747) 279-8744</p>
+  <p>&copy; 2025 Auto Detailing Pro. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
